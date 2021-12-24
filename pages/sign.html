@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<style>
+		center {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			height: 100vh;
+			
+		}
+		body {
+			background: #f1f1f1f2;
+		}
+	</style>
+  </head>
+<body>
+<center>
+	<h1 style="text-decoration: underline;">Sign-Up</h1>
+			<div class="container">
+				<form class="sign-in">
+				<label id="name">FullName:</label>
+				<br>
+				<input type="text"  id="fullname">
+				<p style="color:red;" id="invalid-fullname1">invalid FullName</p>
+				<p style="color:red;" id="required-fullname2">FullNameis required</p>
+				<br>
+				<label>DOB:</label>
+				<br>
+				<input type="date" id="dob">
+				<br>
+				<label>Phone-number:</label>
+				<br>
+				<input type="number" id="phonenumber">
+				<p style="color:red;" id="invalid-phonenumber1">invalid phoneNumber</p>
+				<p style="color:red;" id="required-phonenumber2"> phoneNumber is required</p>
+				<br>
+				<label id="gender" >Gender:</label>
+				<br>
+				<input type="radio" name="name">male
+				<input type="radio" name="name">female
+				<p style="color:red;" id="required-gender">gender is required</p>
+				<br>
+				<label>Email:</label>
+				<br>
+				<input type="email" id="email" >
+				<p style="color:red;" id="invalid-email1">invalid email</p>
+				<p style="color:red;" id="required-email2">email is required</p>
+				<br>
+				<label >password:</label>
+				<br>
+				<input type="password" id="password">
+				<p style="color:red;" id="invalid-password1">invalid password</p>
+				<p style="color:red;" id="required-password2">password is required</p>
+				<br>
+				<label>confirm-password:</label>
+				<br>
+				<input type="password" id="confirmPassword">
+				<p style="color:red;" id="invalid-confirm1">invalid password</p>
+				<p style="color:red;" id="required-confirm2">password is required</p>
+				<br>
+				</form>
+			</div>
+			<br>
+						
+						<div class="col-md-6">
+						  <div class="col-12">
+							<div class="form-check">
+							  <input style="position: relative;
+							  right: 6px;" class="form-check-input" type="checkbox" id="invalidCheck">
+							  <p style="color:red;" id="check">click the button to proceed</p>
+							  <label class="form-check-label" for="invalidCheck">
+								Agree to terms and conditions
+							  </label>
+							  <div class="invalid-feedback">
+								You must agree before submitting.
+							  </div>
+							</div>
+						  </div>
+						  <br>
+						  <div class="col-12">
+							<button class="btn btn-primary" type="submit" onclick="signUp()">Submit</button>
+						  </div>
+						</div>
+</form>
+
+ <script src="../assets/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+ <script src="../js/script.js"></script>
+ </body>
+</html>

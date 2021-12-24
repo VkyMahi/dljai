@@ -1,0 +1,46 @@
+body
+{
+	margin:0;
+	padding:0;
+}
+.myForm
+{
+	margin:10px;
+}
+.form-group
+{
+	margin-right:1rem!important;
+	display:inline-block;
+}
+.form-group,a
+{
+	text-decoration:none;
+}
+.f-password
+{
+	font-size:10px;
+	margin-left:15rem!important;
+	margin-left:6rem;
+}
+p
+{
+	display:none;
+}
+.form-check
+{
+	display: flex;
+	justify-content: center;
+}
+
+
+
+/* table css */
+table,th,tr,td
+{
+	margin:10px;
+	border:1px solid ;
+}
+
+input[readonly]{
+	background-color: gray;
+}

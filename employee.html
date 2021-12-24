@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./assets/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/homestyle.css">
+    <link rel="stylesheet" href="./assets\font-awesome-4.7.0\css\font-awesome.min.css">
+
+    <style>
+        th, td {
+            text-align: center;
+            text-transform: capitalize;
+        }
+        center {
+            margin-top: 100px;
+   
+        }
+        label {
+            min-width: 180px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!--Header-->
+<header>
+    <nav class="navbar navbar-light navbar fixed-top container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="./img/cardamom.jpeg" alt="cardamom" width="30" height="24"
+                class="d-inline-block align-text-top">
+            <span class="fs-4">DL</span> JAI
+        </a>
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link active text-white " aria-current="page" href="home.html">Home</a>
+            </li>
+            <li class="nav-item" class="bg-white">
+                <a class="nav-link text-white active" href="employee.html">Employee</a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link text-white" href="index.html">Logout</a>
+            </li>
+        </ul>
+
+    </nav>
+</header>
+
+
+
+    <center>
+        <pre class="fs-1">Employee_Details</pre>
+        <button class="btn btn-primary" onclick="onAddOpen()" data-bs-toggle="modal" data-bs-target="#exampleModal">Add</button>
+        <table id="table_employee">
+
+            <!--Table Heading-->
+
+            <tr>
+                <th>Employee_Name </th>
+                <th>Employee_Id </th>
+                <th>Employee_Age </th>
+                <th>Employee_Department </th>
+                <th>Employee_Role </th>
+                <th>Employee_Address </th>
+                <th colspan="2">Action</th>
+            </tr>
+        </table>
+    </center>
+
+    <!--Edit button-->
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <label>Employee_Name</label>
+                    <input type="text" value="" id="updateEmpName">
+                    <br><br>
+                    <label>Employee_Id</label>
+                    <input type="number" value=""  id="updateEmpNo">
+                    <br><br>
+                    <label>Employee_Age</label>
+                    <input type="number" value=""  id="updateEmpAge">
+                    <br><br>
+                    <label>Employee_Department</label>
+                    <input type="text" value=""  id="updateEmpDep">
+                    <br><br>
+                    <label>Employee_Role</label>
+                    <input type="text" value=""  id="updateEmpRole">
+                    <br><br>
+                    <label>Employee_Address</label>
+                    <input type="text" value=""  id="updateEmpAddress">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
+                    <button id="updateBtnId" type="button" class="btn btn-primary" data-bs-dismiss="modal" 
+                    onclick="onUpdateData()">Update</button>
+                    <button id="addBtnId" type="button" class="btn btn-primary" data-bs-dismiss="modal" 
+                    onclick="onAddData()">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Delete pop-->
+
+    <!-- Button trigger modal -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Employee_Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Are you Sure Want to Delete ?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">NO</button>
+                    <button type="button" class="btn btn-primary" onclick="onDelete()" data-bs-dismiss="modal">YES</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="./assets/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+<script src="./js/scriptEmployee.js"></script>
+</body>
+
+</html>
+
+
+
+<!--
+
+ 
+    <td>
+        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <i class="fa fa-pencil-square" aria-hidden="true">
+            </i>
+        </button>
+    </td>
+    <td>
+        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            <i class="fa fa-trash" aria-hidden="true"></i>
+        </button>
+    </td>
+
+-->
