@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="./assets/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/homestyle.css">
+
+	<style>
+		header {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			height: 100vh;
+		}
+		body {
+			background: #f1f1f1f2;
+		}
+	</style>
+
+</head>
+
+<body>
+
+
+
+	<!--sign-in-->
+	<center>
+		<header>
+			<h1 style="text-decoration: underline;">Sign-In</h1>
+			<!--main-->
+			<section>
+				<form class="myForm">
+					<div class="container">
+						<label>User-Id:</label>
+						<br>
+						<input type="text" id="userId">
+						<p style="color:red;" id="userid1">userId is required</p>
+						<p style="color:red;" id="userid2">invalid userId</p>
+						<br><br>
+						<label>Password:</label>
+						<br>
+						<input type="password" id="signInPassword">
+						<p style="color:red;" id="passwordid1">password is required</p>
+						<p style="color:red;" id="passwordid2">invalid password</p>
+						<br><br>
+						<div class="form-group" style="margin-bottom: 20px">
+							<label for="remember-me" class="text-dark"><span class="fs-6">Remember
+									me</span><span><input style="margin-left: 10px;
+										
+										position: relative;
+										top: 2px;" id="rememberMe" name="remember-me"
+										type="checkbox"></span></label>
+							<p style="color:red;" id="check">select the button to proceed</p>
+							<br>
+						</div>
+						<br>
+						<a href="./pages/sign.html" class="text-info me-5">Register here</a>
+						<button type="button" class=" btn btn-primary" onclick="signIn()">sign-in</button>
+					</div>
+				</form>
+			</section>
+	</center>
+	<script src="./assets/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+	<script src="./js/script1.js"></script>
+</body>
+
+</html>
